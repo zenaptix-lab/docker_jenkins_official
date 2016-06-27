@@ -63,3 +63,4 @@ ENTRYPOINT ["/bin/tini", "--", "/usr/local/bin/jenkins.sh"]
 # from a derived Dockerfile, can use `RUN plugins.sh active.txt` to setup /usr/share/jenkins/ref/plugins from a support bundle
 COPY plugins.sh /usr/local/bin/plugins.sh
 COPY install-plugins.sh /usr/local/bin/install-plugins.sh
+RUN install-plugins.sh artifactory custom-view-tabs cvs envinject extra-columns greenballs sbt git release git-parameter extended-choice-parameter envfile ssh-slaves
